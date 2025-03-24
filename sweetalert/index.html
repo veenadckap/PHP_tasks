@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetAlert Example</title>
+  <style>body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}</style>
+  </head>
+<body>
+
+
+<h1>Hello SweetAlert!</h1>
+<button onclick="showAlert()">Click me</button><br><br>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+
+  function showAlert() {
+    Swal.fire({
+      title: 'Hello!',
+      text: 'This is a SweetAlert dialog.',
+      icon: 'success',
+      confirmButton: 'OK',
+      confirmButtonColor : '#FF0000'
+    });
+  }
+
+
+    // function showAlert() {
+
+    // Swal.fire({
+    // title: "Do you want to save the changes?",
+    // showDenyButton: true,
+    // showCancelButton: true,
+    // confirmButtonText: "Save",
+    // denyButtonText: `Don't save`
+    // }).then((result) => {
+    // if (result.isConfirmed) {
+    //     Swal.fire("Saved!", "", "success");
+    // } else if (result.isDenied) {
+    //     Swal.fire("Changes are not saved", "", "info");
+    // }
+    // });
+    // }
+
+
+//   function showAlert() {
+// Swal.fire({
+//   position: "top-end",
+//   icon: "success",
+//   title: "Your work has been saved",
+//   showConfirmButton: false,
+//   timer: 1500
+// });
+//   }
+</script>
+
+</body>
+</html>
