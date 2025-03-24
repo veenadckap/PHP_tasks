@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SweetAlert2 Icons Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<button  id="successButton">Show Success Alert</button>
+<button id="errorButton">Show Error Alert</button>
+<button id="warningButton">Show Warning Alert</button>
+<button id="infoButton">Show Info Alert</button>
+<button id="questionButton">Show Question Alert</button><br><br>
+
+ <button id="promptButton">Prompt User</button>
+<script>
+  document.getElementById('successButton').addEventListener('click', () => {
+    // Swal.fire({
+    //   title: 'Success!',
+    //   text: 'Your operation was successful.',
+    //   icon: 'success'
+    // });
+  //   Swal.fire({
+  // icon: "error",
+  // title: "Oops...",
+  // text: "Something went wrong!",
+  // footer: '<a href="#">Why do I have this issue?</a>'
+});
+  // });
+ Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "Something went wrong!",
+  footer: '<a href="#">Why do I have this issue?</a>'
+ })
+  document.getElementById('errorButton').addEventListener('click', () => {
+    Swal.fire({
+      title: 'Error!',
+      text: 'Something went wrong.',
+      icon: 'error'
+    });
+  });
+
+  document.getElementById('warningButton').addEventListener('click', () => {
+    Swal.fire({
+      title: 'Warning!',
+      text: 'Are you sure you want to proceed?',
+      icon: 'warning'
+    });
+  });
+
+  document.getElementById('infoButton').addEventListener('click', () => {
+    Swal.fire({
+      title: 'Information',
+      text: 'This is some useful information.',
+      icon: 'info'
+    });
+  });
+
+  document.getElementById('questionButton').addEventListener('click', () => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'Do you want to continue?',
+      icon: 'question'
+    });
+  });
+
+
+
+
+   document.getElementById('promptButton').addEventListener('click', () => {
+      Swal.fire({
+        title: 'Enter your name',
+        input: 'text',
+        inputPlaceholder: 'Your name',
+        showCancelButton: false,
+        confirmButtonText: 'Submit',
+        cancelButtonText: 'Cancel'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: 'Hello, ' + result.value + '!',
+            text: 'Nice to meet you!',
+            icon: 'success'
+          });
+        }
+      });
+    });
+</script>
+
+</body>
+</html>
